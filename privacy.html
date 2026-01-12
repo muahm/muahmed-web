@@ -193,7 +193,22 @@
     <p>If you have any questions about this Privacy Policy or how your data is handled, you can contact:</p>
     <p>
       <strong>Email:</strong>
-      <a href="mailto:your-email@example.com">your-email@example.com</a>
+      <span id="email-target"></span>
+      <noscript>Email: movo [at] muahmed [dot] com</noscript>
+      <script>
+        (function(){
+          const user = "movo";
+          const domain = "muahmed.com";
+          const email = user + "@" + domain;
+          const target = document.getElementById("email-target");
+          if (!target) return;
+          const a = document.createElement("a");
+          a.href = "mailto:" + email;
+          a.textContent = email;
+          a.className = "contact-link";
+          target.appendChild(a);
+        })();
+      </script>
     </p>
 
     <h2>11. Changes to this policy</h2>

@@ -230,7 +230,7 @@
     <header>
       <div class="id-line">
         <span class="id-dot"></span>
-        <span>Sole professional – DDA licensed</span>
+        <span>Sole professional</span>
       </div>
       <h1>Munir Uddin Ahmed</h1>
       <p class="subtitle">
@@ -271,9 +271,6 @@
           <p class="kv-line">
             <span class="kv-label">Country:</span> United Arab Emirates
           </p>
-          <ul class="meta-list">
-            <li>Operating as an independent professional for consulting, coaching, and training engagements.</li>
-          </ul>
         </div>
       </section>
 
@@ -282,10 +279,22 @@
           <h2>Contact</h2>
           <p class="kv-line">
             <span class="kv-label">Email:</span>
-            <a class="contact-link" href="mailto:your-email@example.com">your-email@example.com</a>
-          </p>
-          <p class="kv-line">
-            <span class="kv-label">Location:</span> UAE (remote and on-site by agreement)
+              <span id="email-target"></span>
+              <noscript>Email: movo [at] muahmed [dot] com</noscript>
+              <script>
+                (function(){
+                  const user = "movo";
+                  const domain = "muahmed.com";
+                  const email = user + "@" + domain;
+                  const target = document.getElementById("email-target");
+                  if (!target) return;
+                  const a = document.createElement("a");
+                  a.href = "mailto:" + email;
+                  a.textContent = email;
+                  a.className = "contact-link";
+                  target.appendChild(a);
+                })();
+              </script>
           </p>
           <p class="kv-line">
             <span class="kv-label">LinkedIn:</span>

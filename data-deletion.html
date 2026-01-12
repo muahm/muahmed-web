@@ -109,19 +109,7 @@
 
     <ol>
       <li>
-        Send an email to
-        <a href="mailto:your-email@example.com">your-email@example.com</a>
-        with the subject line:
-        <strong>Data Deletion Request</strong>.
-      </li>
-      <li>
-        In the body of the email, include:
-        <ul>
-          <li>The email address associated with your external login account (e.g., your Facebook account).</li>
-          <li>The name of the application or service you used.</li>
-        </ul>
-      </li>
-      <li>Your request will be reviewed, and associated data will be deleted within 7 days, where technically feasible.</li>
+        In the app, go to settings, click on delete my account. All data from app's localstorage, game engine and server will be deleted
     </ol>
 
     <h2>2. Data related to direct contact or consulting</h2>
@@ -131,9 +119,7 @@
     </p>
     <ol>
       <li>
-        Email
-        <a href="mailto:your-email@example.com">your-email@example.com</a>
-        indicating that you would like your contact data to be deleted.
+        Email indicating that you would like your contact data to be deleted.
       </li>
       <li>Provide sufficient information to identify your records (e.g., your full name and the email address used).</li>
       <li>Your request will be processed within a reasonable period, and confirmation will be sent once completed.</li>
@@ -151,7 +137,22 @@
       If you have any questions about these Data Deletion Instructions or how your data is handled, please contact:
       <br />
       <strong>Email:</strong>
-      <a href="mailto:your-email@example.com">your-email@example.com</a>
+      <span id="email-target"></span>
+      <noscript>Email: movo [at] muahmed [dot] com</noscript>
+      <script>
+        (function(){
+          const user = "movo";
+          const domain = "muahmed.com";
+          const email = user + "@" + domain;
+          const target = document.getElementById("email-target");
+          if (!target) return;
+          const a = document.createElement("a");
+          a.href = "mailto:" + email;
+          a.textContent = email;
+          a.className = "contact-link";
+          target.appendChild(a);
+        })();
+      </script>
     </p>
 
     <a class="back-link" href="index.html">← Back to main site</a>
