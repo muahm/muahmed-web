@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Munir Uddin Ahmed – Engineering Leader, Agile Evangelist, AI Trainer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Munir Uddin Ahmed – Engineering Leader, Agile Evangelist, and AI Trainer operating as a DDA-licensed sole professional in the UAE."
+  />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card-bg: #151a2b;
+      --accent: #3fa9f5;
+      --accent-soft: rgba(63, 169, 245, 0.14);
+      --text-main: #f5f7ff;
+      --text-muted: #a3abc2;
+      --border-subtle: #262c40;
+      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, #18213a 0, #050714 52%, #03030a 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 16px;
+    }
+
+    .shell {
+      max-width: 900px;
+      width: 100%;
+      background: radial-gradient(circle at top, #1f2640 0, #101524 46%, #090d18 100%);
+      border-radius: 18px;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-soft);
+      padding: 28px 24px 24px;
+    }
+
+    @media (min-width: 768px) {
+      .shell {
+        padding: 32px 32px 28px;
+      }
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 18px;
+      margin-bottom: 22px;
+    }
+
+    .id-line {
+      font-size: 0.88rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .id-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: radial-gradient(circle, #3fa9f5 0, #0c8acb 55%, #08466b 100%);
+      box-shadow: 0 0 12px rgba(63, 169, 245, 0.9);
+    }
+
+    h1 {
+      font-size: 1.7rem;
+      font-weight: 650;
+      letter-spacing: 0.03em;
+    }
+
+    .subtitle {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      max-width: 620px;
+      line-height: 1.5;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .tag {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(63, 169, 245, 0.35);
+      background: linear-gradient(135deg, rgba(63, 169, 245, 0.16), rgba(14, 23, 45, 0.85));
+      color: var(--text-main);
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: 1.6fr 1.1fr;
+      gap: 22px;
+    }
+
+    @media (max-width: 799px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: linear-gradient(145deg, rgba(11, 18, 34, 0.96), rgba(13, 21, 39, 0.96));
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      padding: 14px 16px 16px;
+    }
+
+    .card + .card {
+      margin-top: 12px;
+    }
+
+    h2 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .kv-line {
+      font-size: 0.9rem;
+      margin-bottom: 4px;
+    }
+
+    .kv-label {
+      color: var(--text-muted);
+      margin-right: 4px;
+    }
+
+    .service-list,
+    .meta-list {
+      list-style: none;
+      margin-top: 4px;
+    }
+
+    .service-list li,
+    .meta-list li {
+      margin-bottom: 4px;
+      font-size: 0.9rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      padding: 3px 7px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1px solid rgba(63, 169, 245, 0.4);
+      color: var(--accent);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-top: 3px;
+    }
+
+    .contact-link {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px dotted rgba(63, 169, 245, 0.6);
+    }
+
+    .contact-link:hover {
+      border-bottom-style: solid;
+    }
+
+    .legal-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+      font-size: 0.86rem;
+    }
+
+    .legal-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      border-bottom: 1px dotted rgba(163, 171, 194, 0.6);
+    }
+
+    .legal-links a:hover {
+      color: var(--accent);
+      border-bottom-color: rgba(63, 169, 245, 0.9);
+    }
+
+    footer {
+      margin-top: 18px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .dot-separator::before {
+      content: "•";
+      margin: 0 6px;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="id-line">
+        <span class="id-dot"></span>
+        <span>Sole professional – DDA licensed</span>
+      </div>
+      <h1>Munir Uddin Ahmed</h1>
+      <p class="subtitle">
+        Engineering Leader, Agile Evangelist, and AI Trainer helping organizations ship reliable software, adopt modern delivery
+        practices, and integrate AI in pragmatic, outcome-driven ways.
+      </p>
+      <div class="tags">
+        <span class="tag">Engineering leadership</span>
+        <span class="tag">Agile &amp; delivery</span>
+        <span class="tag">AI training &amp; enablement</span>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="card">
+          <h2>Professional services</h2>
+          <ul class="service-list">
+            <li>• Engineering leadership and organization design</li>
+            <li>• Agile coaching and delivery transformation</li>
+            <li>• AI adoption, training, and enablement</li>
+            <li>• Technical strategy, architecture, and execution advisory</li>
+          </ul>
+          <span class="pill">Consulting &amp; advisory</span>
+        </div>
+
+        <div class="card">
+          <h2>Business details</h2>
+          <p class="kv-line">
+            <span class="kv-label">Name:</span> Munir Uddin Ahmed
+          </p>
+          <p class="kv-line">
+            <span class="kv-label">Business type:</span> Sole Professional
+          </p>
+          <p class="kv-line">
+            <span class="kv-label">License authority:</span> Dubai Development Authority (DDA)
+          </p>
+          <p class="kv-line">
+            <span class="kv-label">Country:</span> United Arab Emirates
+          </p>
+          <ul class="meta-list">
+            <li>Operating as an independent professional for consulting, coaching, and training engagements.</li>
+          </ul>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card">
+          <h2>Contact</h2>
+          <p class="kv-line">
+            <span class="kv-label">Email:</span>
+            <a class="contact-link" href="mailto:your-email@example.com">your-email@example.com</a>
+          </p>
+          <p class="kv-line">
+            <span class="kv-label">Location:</span> UAE (remote and on-site by agreement)
+          </p>
+          <p class="kv-line">
+            <span class="kv-label">LinkedIn:</span>
+            <a
+              class="contact-link"
+              href="https://www.linkedin.com/in/muniruddin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              linkedin.com/in/muniruddin
+            </a>
+          </p>
+          <div class="legal-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="data-deletion.html">Data Deletion Instructions</a>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Munir Uddin Ahmed. All rights reserved.</div>
+      <div>
+        Sole professional – DDA license
+        <span class="dot-separator"></span>
+        This site is provided for professional and compliance purposes.
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
